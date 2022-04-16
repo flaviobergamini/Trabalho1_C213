@@ -153,10 +153,6 @@ end
 
 %%Plotando os gráficos de entrada e saída do sistema
 plot(t,pv,'r')
-xlim([0, 150])
-ylim([0, 40])
-%hold on
-%plot(t,sp,'b')
-%grid on
+title("Resposta Controlada")
 
 
