@@ -59,8 +59,8 @@ enter = input('Pressione Enter para continuar...')
 
 Num = 2.8;   %% Numerador da F.T.
 Den = 12;    %% Denominador da F.T. 
-Mp = 35;     %% Máximo Pico em %
-Ta = 65;     %% Tempo de Acomodação em [s]
+Mp = input("Entre com o valor do Overshoot em % ")
+Ta = input("Entre com o tempo de acomodação em [s]")
 Ess = 0;     %% Erro em Regime Permanente
 
 %________________ Cálculo Ki_______________________
@@ -113,8 +113,6 @@ sys = tf(Num,Den)
 D = series(C_s,sys);
 E = feedback(D,1);
 
-enter = input('Pressione Enter para continuar...')
-
 %% Aplicando o algoritmo para verificar a saáda do sistema em malha fechada com controlador PI
 A1 = a1;
 B1 = b1;
@@ -154,5 +152,6 @@ end
 %%Plotando os gráficos de entrada e saída do sistema
 plot(t,pv,'r')
 title("Resposta Controlada")
+
 
 
